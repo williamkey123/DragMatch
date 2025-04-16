@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		6A5897B32DAEB27700F3B885 /* CandidateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5897B22DAEB27700F3B885 /* CandidateView.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		6A1B7A742DA05CB3005EE735 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -31,7 +27,6 @@
 		6A1B7A662DA05CB1005EE735 /* DragMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1B7A732DA05CB3005EE735 /* DragMatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragMatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1B7A7D2DA05CB3005EE735 /* DragMatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragMatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A5897B22DAEB27700F3B885 /* CandidateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,7 +75,6 @@
 		6A1B7A5D2DA05CB1005EE735 = {
 			isa = PBXGroup;
 			children = (
-				6A5897B22DAEB27700F3B885 /* CandidateView.swift */,
 				6A1B7A682DA05CB1005EE735 /* DragMatch */,
 				6A1B7A762DA05CB3005EE735 /* DragMatchTests */,
 				6A1B7A802DA05CB3005EE735 /* DragMatchUITests */,
@@ -242,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A5897B32DAEB27700F3B885 /* CandidateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
