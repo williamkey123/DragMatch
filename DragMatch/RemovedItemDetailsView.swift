@@ -18,6 +18,16 @@ struct RemovedItemDetailsView: View {
     @State private var opacity: Double = 0
     private var onComplete: () -> Void
 
+    // MARK: animation timing constants
+    private let fadeInTime: TimeInterval = 0.2
+    private let animatedMovementDelay: TimeInterval = 0.5
+    private let movementToFinalPositionTime: TimeInterval = 0.2
+
+    // MARK: view and scale constants
+    private let outroScale: CGFloat = 0.3
+    private let font: Font = .system(size: 34, weight: .bold)
+    private let fontStyle: any ShapeStyle = .primary.opacity(0.8)
+
     init(
         count: Int,
         location: CGPoint,
@@ -33,28 +43,31 @@ struct RemovedItemDetailsView: View {
 
     var body: some View {
         Text(displayedText)
-            .font(.system(size: 34, weight: .bold))
-            .foregroundStyle(.primary.opacity(0.8))
+            .font(font)
+            .foregroundStyle(fontStyle)
             .scaleEffect(scale)
             .position(x: currentPosition.x, y: currentPosition.y)
             .opacity(opacity)
             .onAppear {
-                // First, fade in the displayed text
+                // Set the text
                 self.displayedText = "+\(count)"
-                withAnimation(.linear(duration: 0.2)) {
+
+                // First, fade in the displayed text
+                withAnimation(.linear(duration: fadeInTime)) {
                     opacity = 1
                     scale = 1
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + animatedMovementDelay) {
                     // After text has faded in, animate the position change
-                    withAnimation(.easeInOut(duration: 0.2)) {
+                    withAnimation(.easeInOut(duration: movementToFinalPositionTime)) {
                         if let finalTextPosition {
                             self.currentPosition = finalTextPosition
                         }
-                        self.scale = 0.3
+                        self.scale = outroScale
                     }
+                    // Give it a moment to complete, then call the completion handler
                     DispatchQueue.main.asyncAfter(
-                        deadline: .now() + 0.22,
+                        deadline: .now() + movementToFinalPositionTime + 0.1,
                         execute: self.onComplete
                     )
                 }
