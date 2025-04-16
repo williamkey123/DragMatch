@@ -17,7 +17,7 @@ struct CandidateView: View {
 
     var body: some View {
         ZStack(alignment: .center) {
-            AnyStack(direction: candidates.horizontal ? .horizontal : .vertical, spacing: 5) {
+            StackView(axis: candidates.horizontal ? .horizontal : .vertical, spacing: 5) {
                 Rectangle()
                     .fill(Color.clear)
                     .frame(width: cellSize, height: cellSize)
