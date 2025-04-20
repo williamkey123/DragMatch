@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A1B7A662DA05CB1005EE735 /* DragMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A1B7A732DA05CB3005EE735 /* DragMatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragMatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A1B7A7D2DA05CB3005EE735 /* DragMatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragMatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1B7A662DA05CB1005EE735 /* HerdMentality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HerdMentality.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1B7A732DA05CB3005EE735 /* HerdMentalityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HerdMentalityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1B7A7D2DA05CB3005EE735 /* HerdMentalityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HerdMentalityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,9 +85,9 @@
 		6A1B7A672DA05CB1005EE735 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A1B7A662DA05CB1005EE735 /* DragMatch.app */,
-				6A1B7A732DA05CB3005EE735 /* DragMatchTests.xctest */,
-				6A1B7A7D2DA05CB3005EE735 /* DragMatchUITests.xctest */,
+				6A1B7A662DA05CB1005EE735 /* HerdMentality.app */,
+				6A1B7A732DA05CB3005EE735 /* HerdMentalityTests.xctest */,
+				6A1B7A7D2DA05CB3005EE735 /* HerdMentalityUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6A1B7A652DA05CB1005EE735 /* DragMatch */ = {
+		6A1B7A652DA05CB1005EE735 /* HerdMentality */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A1B7A872DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "DragMatch" */;
+			buildConfigurationList = 6A1B7A872DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "HerdMentality" */;
 			buildPhases = (
 				6A1B7A622DA05CB1005EE735 /* Sources */,
 				6A1B7A632DA05CB1005EE735 /* Frameworks */,
@@ -110,16 +110,16 @@
 			fileSystemSynchronizedGroups = (
 				6A1B7A682DA05CB1005EE735 /* DragMatch */,
 			);
-			name = DragMatch;
+			name = HerdMentality;
 			packageProductDependencies = (
 			);
 			productName = DragMatch;
-			productReference = 6A1B7A662DA05CB1005EE735 /* DragMatch.app */;
+			productReference = 6A1B7A662DA05CB1005EE735 /* HerdMentality.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6A1B7A722DA05CB3005EE735 /* DragMatchTests */ = {
+		6A1B7A722DA05CB3005EE735 /* HerdMentalityTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A1B7A8A2DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "DragMatchTests" */;
+			buildConfigurationList = 6A1B7A8A2DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "HerdMentalityTests" */;
 			buildPhases = (
 				6A1B7A6F2DA05CB3005EE735 /* Sources */,
 				6A1B7A702DA05CB3005EE735 /* Frameworks */,
@@ -133,16 +133,16 @@
 			fileSystemSynchronizedGroups = (
 				6A1B7A762DA05CB3005EE735 /* DragMatchTests */,
 			);
-			name = DragMatchTests;
+			name = HerdMentalityTests;
 			packageProductDependencies = (
 			);
 			productName = DragMatchTests;
-			productReference = 6A1B7A732DA05CB3005EE735 /* DragMatchTests.xctest */;
+			productReference = 6A1B7A732DA05CB3005EE735 /* HerdMentalityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6A1B7A7C2DA05CB3005EE735 /* DragMatchUITests */ = {
+		6A1B7A7C2DA05CB3005EE735 /* HerdMentalityUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A1B7A8D2DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "DragMatchUITests" */;
+			buildConfigurationList = 6A1B7A8D2DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "HerdMentalityUITests" */;
 			buildPhases = (
 				6A1B7A792DA05CB3005EE735 /* Sources */,
 				6A1B7A7A2DA05CB3005EE735 /* Frameworks */,
@@ -156,11 +156,11 @@
 			fileSystemSynchronizedGroups = (
 				6A1B7A802DA05CB3005EE735 /* DragMatchUITests */,
 			);
-			name = DragMatchUITests;
+			name = HerdMentalityUITests;
 			packageProductDependencies = (
 			);
 			productName = DragMatchUITests;
-			productReference = 6A1B7A7D2DA05CB3005EE735 /* DragMatchUITests.xctest */;
+			productReference = 6A1B7A7D2DA05CB3005EE735 /* HerdMentalityUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6A1B7A612DA05CB1005EE735 /* Build configuration list for PBXProject "DragMatch" */;
+			buildConfigurationList = 6A1B7A612DA05CB1005EE735 /* Build configuration list for PBXProject "HerdMentality" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6A1B7A652DA05CB1005EE735 /* DragMatch */,
-				6A1B7A722DA05CB3005EE735 /* DragMatchTests */,
-				6A1B7A7C2DA05CB3005EE735 /* DragMatchUITests */,
+				6A1B7A652DA05CB1005EE735 /* HerdMentality */,
+				6A1B7A722DA05CB3005EE735 /* HerdMentalityTests */,
+				6A1B7A7C2DA05CB3005EE735 /* HerdMentalityUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		6A1B7A752DA05CB3005EE735 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6A1B7A652DA05CB1005EE735 /* DragMatch */;
+			target = 6A1B7A652DA05CB1005EE735 /* HerdMentality */;
 			targetProxy = 6A1B7A742DA05CB3005EE735 /* PBXContainerItemProxy */;
 		};
 		6A1B7A7F2DA05CB3005EE735 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6A1B7A652DA05CB1005EE735 /* DragMatch */;
+			target = 6A1B7A652DA05CB1005EE735 /* HerdMentality */;
 			targetProxy = 6A1B7A7E2DA05CB3005EE735 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -463,7 +463,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragMatch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DragMatch";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HerdMentality.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HerdMentality";
 			};
 			name = Debug;
 		};
@@ -482,7 +482,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragMatch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DragMatch";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HerdMentality.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HerdMentality";
 			};
 			name = Release;
 		};
@@ -523,7 +523,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6A1B7A612DA05CB1005EE735 /* Build configuration list for PBXProject "DragMatch" */ = {
+		6A1B7A612DA05CB1005EE735 /* Build configuration list for PBXProject "HerdMentality" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A1B7A852DA05CB3005EE735 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A1B7A872DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "DragMatch" */ = {
+		6A1B7A872DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "HerdMentality" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A1B7A882DA05CB3005EE735 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A1B7A8A2DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "DragMatchTests" */ = {
+		6A1B7A8A2DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "HerdMentalityTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A1B7A8B2DA05CB3005EE735 /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A1B7A8D2DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "DragMatchUITests" */ = {
+		6A1B7A8D2DA05CB3005EE735 /* Build configuration list for PBXNativeTarget "HerdMentalityUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A1B7A8E2DA05CB3005EE735 /* Debug */,
