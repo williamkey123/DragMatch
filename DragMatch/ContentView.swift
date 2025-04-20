@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        GameView()
+        GameViewWithChrome()
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(GameStats.preview)
 }

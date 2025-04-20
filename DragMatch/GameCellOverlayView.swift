@@ -17,13 +17,22 @@ struct GameCellOverlayView: View {
         self.isHighlighted = isHighlighted
     }
 
+    var color: Color {
+        if isHighlighted {
+            return Color.gridHighlight
+        } else if text.isEmpty {
+            return Color.gridSquare
+        } else {
+            return Color.gridSquare
+        }
+    }
+
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(isHighlighted ? Color.red.opacity(0.2) : Color.gray.opacity(0.2))
+                .fill(color)
                 .padding(2.5)
             GameCellText(text)
-                .font(.system(size: 40))
         }
     }
 }

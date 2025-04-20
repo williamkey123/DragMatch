@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DragMatchApp: App {
+    @StateObject private var stats = GameStats()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(stats)
         }
     }
 }

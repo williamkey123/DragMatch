@@ -25,12 +25,12 @@ struct CandidateView: View {
                 .gesture(makeDragGesture(firstDragged: true))
             Rectangle()
                 .fill(Color.clear)
+                .frame(width: cellSize, height: cellSize)
                 .overlay(Text("\(candidates.item2)"))
                 .gesture(makeDragGesture(firstDragged: false))
-
         }
-        .font(.system(size: 40))
-        .frame(width: 120, height: 120, alignment: .center)
+        .frame(width: cellSize * 2, height: cellSize * 2, alignment: .center)
+        .font(.system(size: cellSize * 0.7))
     }
 
     private func makeDragGesture(firstDragged: Bool) -> some Gesture {

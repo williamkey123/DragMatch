@@ -8,27 +8,34 @@
 import Foundation
 
 final class GameViewModel: ObservableObject {
-    static let items: [Character] = ["🐱", "🐷", "🐶", "🐮", "🦄", "🐼"]
+    static let items: [Character] = ["🐴", "🐷", "🐔", "🐮"]
     static let gridSize = 6
 
-    @Published var gridItems: [[String]] = Array(
+    @Published private(set) var gridItems: [[String]] = Array(
         repeating: Array(repeating: "", count: GameViewModel.gridSize),
         count: GameViewModel.gridSize
     )
     @Published var cellFrames: [GridCell] = []
-    @Published var candidates: (item1: Character, item2: Character, horizontal: Bool)? = (
+    @Published private(set) var candidates: (item1: Character, item2: Character, horizontal: Bool)? = (
         item1: GameViewModel.items.randomElement()!,
         item2: GameViewModel.items.randomElement()!,
         horizontal: Bool.random()
     )
     @Published var dragOffset: CGSize = .zero
-    @Published var highlightedCells: [(column: Int, row: Int)] = []
+    @Published private(set) var highlightedCells: [(column: Int, row: Int)] = []
     @Published var firstDragged: Bool? = nil
-    @Published var isGameOver: Bool = false
-    @Published var clearedAnimals: Int = 0
-    @Published var displayedClearedAnimals: Int = 0
-    @Published var placedAnimals: Int = 0
+    @Published private(set) var isGameOver: Bool = false
+    @Published private(set) var clearedAnimals: Int = 0
+    @Published private(set) var displayedClearedAnimals: Int = 0
+    @Published private(set) var placedAnimals: Int = 0
     @Published private(set) var clearedItemDetails: ClearedItemDetails? = nil
+    @Published var isShowingHighScoreOverlay: Bool = false
+    
+    private var stats: GameStats? = nil
+
+    func setStats(_ stats: GameStats) {
+        self.stats = stats
+    }
 
     func canDropCandidates(at point: CGPoint) -> Bool {
         return canDropCandidatesOnLocations(getGridLocations(at: point))
@@ -200,6 +207,11 @@ final class GameViewModel: ObservableObject {
             regenerateCandidatePairs(horizontal: true)
         case (false, false):
             isGameOver = true
+            if let stats, placedAnimals > stats.highScore {
+                isShowingHighScoreOverlay = true
+                stats.highScore = placedAnimals
+            }
+            stats?.gamesPlayed += 1
         }
     }
 

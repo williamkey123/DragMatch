@@ -21,6 +21,7 @@ struct GameCellView: View {
             .frame(width: cellSize, height: cellSize)
             .overlay(
                 GameCellOverlayView(item, isHighlighted: isHighlighted)
+                    .font(.system(size: cellSize * 0.7))
             )
             .background(GeometryReader { geo in
                 Color.clear.preference(
