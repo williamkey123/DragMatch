@@ -1,6 +1,6 @@
 //
 //  GameStats.swift
-//  DragMatch
+//  HerdMentality
 //
 //  Created by William Key on 4/19/25.
 //

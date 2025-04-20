@@ -1,6 +1,6 @@
 //
 //  GameCellView.swift
-//  DragMatch
+//  HerdMentality
 //
 //  Created by William Key on 4/15/25.
 //

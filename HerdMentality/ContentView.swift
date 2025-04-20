@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  DragMatch
+//  HerdMentality
 //
 //  Created by William Key on 4/4/25.
 //

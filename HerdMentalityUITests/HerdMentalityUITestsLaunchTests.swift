@@ -1,13 +1,13 @@
 //
-//  DragMatchUITestsLaunchTests.swift
-//  DragMatchUITests
+//  HerdMentalityUITestsLaunchTests.swift
+//  HerdMentalityUITests
 //
 //  Created by William Key on 4/4/25.
 //
 
 import XCTest
 
-final class DragMatchUITestsLaunchTests: XCTestCase {
+final class HerdMentalityUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
