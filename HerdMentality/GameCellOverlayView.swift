@@ -12,16 +12,14 @@ struct GameCellOverlayView: View {
     let text: String
     let isHighlighted: Bool
 
-    init(_ text: String, isHighlighted: Bool) {
-        self.text = text
+    init(_ character: Character?, isHighlighted: Bool) {
+        self.text = character.map(String.init) ?? ""
         self.isHighlighted = isHighlighted
     }
 
     var color: Color {
         if isHighlighted {
             return Color.gridHighlight
-        } else if text.isEmpty {
-            return Color.gridSquare
         } else {
             return Color.gridSquare
         }

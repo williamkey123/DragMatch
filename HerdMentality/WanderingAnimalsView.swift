@@ -10,16 +10,16 @@ import SwiftUI
 struct WanderingAnimalsView: View {
     private var positioningCoordinator = AnimalPosotioningCoordinator()
 
-    @State private var animals: [Animal]
+    @State private var animals: [IdentifiedAnimal]
 
-    struct Animal: Hashable {
+    struct IdentifiedAnimal: Hashable {
         let id = UUID()
         let text: String
     }
 
     init(animalCount: Int = 12) {
         animals = (0..<animalCount).map { _ in
-            Animal(text: "\(GameViewModel.items.randomElement()!)")
+            IdentifiedAnimal(text: "\(Animal.allCases.randomElement()!.emoji)")
         }
     }
 

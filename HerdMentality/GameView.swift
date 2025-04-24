@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct GameView: View {
-    @StateObject var viewModel = GameViewModel()
+    @State var viewModel: GameViewModel = .init()
+
     @EnvironmentObject var stats: GameStats
     @State var countLocation: CGPoint = .zero
-    let gridSize = GameViewModel.gridSize
+    let gridSize = GameModel.gridSize
     static let coordinateSpaceName: NamedCoordinateSpace = .named("gameboard")
     let gameFramePadding: CGFloat = 20
 
@@ -20,6 +21,10 @@ struct GameView: View {
         let shorter = min(size.width, size.height)
         let squareSize = min(shorter, longer / 2)
         return squareSize / CGFloat(gridSize)
+    }
+
+    func restartGame() {
+        self.viewModel.restartGame()
     }
 
     var body: some View {
@@ -42,11 +47,15 @@ struct GameView: View {
                     axis: isPortrait ? .vertical : .horizontal,
                     topAlignment: .center,
                     leadingAlignment: .center,
-                    bottomAlignment: viewModel.isGameOver ? .center : .top,
+                    bottomAlignment: viewModel.game.isGameOver ? .center : .top,
                     trailingAlignment: .center,
                     animation: .linear
                 ) {
-                    GameBoardGridView(cellSize: cellSize, gridSize: gridSize, viewModel: viewModel)
+                    GameBoardGridView(
+                        cellSize: cellSize,
+                        gridSize: gridSize,
+                        viewModel: viewModel
+                    )
                         .background(
                             RoundedRectangle(cornerRadius: 7)
                                 .scale(1.02)
@@ -54,12 +63,16 @@ struct GameView: View {
                         )
                 } topOrLeadingContent: {
                     StatisticsView(
-                        placedAnimals: viewModel.placedAnimals,
+                        placedAnimals: viewModel.game.placedAnimals,
                         clearedAnimals: viewModel.displayedClearedAnimals,
                         countLocation: $countLocation
                     )
                 } bottomOrTrailingContent: {
-                    BottomView(viewModel: viewModel, cellSize: cellSize)
+                    BottomView(
+                        viewModel: viewModel,
+                        cellSize: cellSize,
+                        onRestart: restartGame
+                    )
                 }
             }
             .coordinateSpace(Self.coordinateSpaceName)
@@ -88,13 +101,7 @@ struct GameView: View {
         .environmentObject(GameStats.preview)
 }
 
-struct CountPositionPreferenceKey: PreferenceKey {
-    static var defaultValue: CGPoint = .zero
 
-    static func reduce(value: inout CGPoint, nextValue: () -> CGPoint) {
-        value = nextValue()
-    }
-}
 
 
 

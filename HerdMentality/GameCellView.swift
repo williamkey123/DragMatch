@@ -12,7 +12,7 @@ struct GameCellView: View {
     let row: Int
     let column: Int
     let cellSize: CGFloat
-    let item: String
+    let item: Animal?
     let isHighlighted: Bool
 
     var body: some View {
@@ -20,7 +20,7 @@ struct GameCellView: View {
             .fill(Color.clear)
             .frame(width: cellSize, height: cellSize)
             .overlay(
-                GameCellOverlayView(item, isHighlighted: isHighlighted)
+                GameCellOverlayView(item?.emoji, isHighlighted: isHighlighted)
                     .font(.system(size: cellSize * 0.7))
             )
             .background(GeometryReader { geo in

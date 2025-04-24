@@ -31,7 +31,7 @@ struct StatisticsView: View {
                     .animation(numericAnimation, value: clearedAnimals)
                     .background(GeometryReader { geo in
                         Color.clear.preference(
-                            key: CountPositionPreferenceKey.self,
+                            key: ViewPositionPreferenceKey.self,
                             value: geo.frame(in: GameView.coordinateSpaceName).center
                         )
                         .onAppear {
@@ -41,7 +41,7 @@ struct StatisticsView: View {
                             }
                         }
                     })
-                    .onPreferenceChange(CountPositionPreferenceKey.self) { value in
+                    .onPreferenceChange(ViewPositionPreferenceKey.self) { value in
                         self.countLocation = value
                     }
                 Text("Animals Cleared")

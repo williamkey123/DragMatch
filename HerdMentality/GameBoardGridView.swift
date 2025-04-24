@@ -11,7 +11,7 @@ import SwiftUI
 struct GameBoardGridView: View {
     let cellSize: CGFloat
     let gridSize: Int
-    @ObservedObject var viewModel: GameViewModel
+    var viewModel: GameViewModel
 
     var body: some View {
         VStack(spacing: 0) {
@@ -21,13 +21,17 @@ struct GameBoardGridView: View {
                         let isHighlighted = viewModel.highlightedCells.contains {
                             $0.row == row && $0.column == column
                         }
-                        GameCellView(
-                            row: row,
-                            column: column,
-                            cellSize: cellSize,
-                            item: viewModel.gridItems[row][column],
-                            isHighlighted: isHighlighted
-                        )
+                        if row < viewModel.displayedGridItems.count,
+                           column < viewModel.displayedGridItems[row].count
+                        {
+                            GameCellView(
+                                row: row,
+                                column: column,
+                                cellSize: cellSize,
+                                item: viewModel.displayedGridItems[row][column],
+                                isHighlighted: isHighlighted
+                            )
+                        }
                     }
                 }
             }
